@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Daniel Tilley</title>
+
+    <!-- Bootstrap 
+    <link href="css/bs/bootstrap.min.css" rel="stylesheet">
+	-->
+	
+	<!-- styles -->
+	<link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  
+  
+
+  
+  <div id="bg"></div>
+  
+  <div id="content">
+  
+  	<section class="greeting">
+		DANIEL TILLEY
+	</section>	
+	
+	
+	<section class="test">
+	
+		<h1>Aptent Phasellus</h1>
+		<h2>Ad</h2>
+
+		<p>Et proin netus sit senectus primis <strong>taciti</strong> dis. Varius est, pede morbi sagittis consectetuer rutrum rutrum proin semper taciti aliquet. Tempor consectetuer vivamus aliquam, id hendrerit lacinia ullamcorper libero porta. Fusce viverra cras cubilia.</p>
+		<h2>Ligula Parturient Mi Amet Enim Dictumst</h2>
+
+		<p>Ut senectus nascetur gravida platea eget rutrum curabitur. Hendrerit habitasse. Aenean volutpat orci litora cras ullamcorper varius iaculis viverra ornare donec montes blandit duis. Hendrerit at est <em>ultrices</em> aliquam ad netus.</p>
+
+		<p>Leo fermentum habitant, egestas dui iaculis nisi tristique tincidunt. Feugiat fusce leo hymenaeos nam venenatis <strong>magna</strong> mus phasellus aenean egestas bibendum magnis convallis consectetuer. Montes. Sit pretium phasellus tincidunt donec est quam parturient accumsan elementum.</p>
+
+	</section>
+	
+	</div>
+
+  
+  
+  
+  
+	
+	
+		<!-- include jquery 3.1 -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	
+	<!--include easing
+	<script src="js/easing/JQeasing.js"></script>
+	-->
+	<div id="scriptHolder"></div>
+
+	<script type="text/javascript">
+	
+
+	
+	//load files
+	$(document).ready(function(){
+	
+	//load content
+	/*
+	//Maybe preloader for content
+	var holders = ['home_content' , 'portfolio_content' , 'about_me_content' , 'contact_content'];
+	var locations = ['home/home.html' , 'portfolio/portfolio.html' , 'about-me/about-me.html' , 'contact/contact.html'];
+	var basePath = 'resource/content/';
+	for (i=0; i< holders.length; ++i){
+		$('#' + holders[i]).load(basePath + locations[i]); 
+	}
+	*/
+	//end content load
+	
+	
+	
+	//load script
+		var scripts = ["js/jq/scrolling.js"];
+		var done = false;
+		var checkDone = function(){
+		if(!done && (!this.readyS || this.readystate == "loaded" || this.readystate == "complete")){
+			done = true;
+			}
+		};
+		var a = Math.random();
+		for (i = 0; i < scripts.length; ++i){
+			var s = document.createElement("script");
+			s.type = "text/javascript";
+			s.src = scripts[i] + "?v=" + a;
+			done = false;
+			s.onload = s.onreadystatechange = checkDone();
+			$("#scriptHolder").append(s);
+		}
+	});
+	</script>
+  </body>
+</html>
