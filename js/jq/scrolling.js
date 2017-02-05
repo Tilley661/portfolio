@@ -1,11 +1,11 @@
 var mousewheelevt=(/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
- 
+var contPos = 0;
  
  
  var myFun = function(e){
 	var evt=window.event || e //equalize event object
     var delta=evt.detail? evt.detail*(-120) : evt.wheelDelta
-	var a = 20;			//distance to move
+	var a = 40;			//distance to move
 	var toMove = $('#content');
 	
 	if (delta > 0){
@@ -17,6 +17,7 @@ var mousewheelevt=(/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mo
 			left: '-=' + a + 'px'
 		});
 	}
+	contPos = toMove.offset().left; // stor in global for future ref
  }
  
  

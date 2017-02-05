@@ -36,4 +36,23 @@ h2{
 	top:0px;
 	color:white;
 }
+section{
+  margin:0 auto;
+}
 
+
+#title_text{
+	margin:0 auto;
+}
+
+
+
+#title_text h1{
+	margin:0 auto;
+	display:inline;
+}
+
+#title_text canvas{
+	display:inline;
+	margin:0 auto;
+}

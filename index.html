@@ -32,13 +32,17 @@
   <div id="content">
   
   	<section class="greeting">
-		DANIEL TILLEY
+		<div id="title_text">
+			<h1>DANIEL TILLEY</h1>
+			<br>
+			<canvas id="underline"></canvas>
+		</div>
 	</section>	
 	
 	
-	<section class="test">
+	<section class="about">
 	
-		<h1>Aptent Phasellus</h1>
+		<h1>About</h1>
 		<h2>Ad</h2>
 
 		<p>Et proin netus sit senectus primis <strong>taciti</strong> dis. Varius est, pede morbi sagittis consectetuer rutrum rutrum proin semper taciti aliquet. Tempor consectetuer vivamus aliquam, id hendrerit lacinia ullamcorper libero porta. Fusce viverra cras cubilia.</p>
@@ -49,6 +53,21 @@
 		<p>Leo fermentum habitant, egestas dui iaculis nisi tristique tincidunt. Feugiat fusce leo hymenaeos nam venenatis <strong>magna</strong> mus phasellus aenean egestas bibendum magnis convallis consectetuer. Montes. Sit pretium phasellus tincidunt donec est quam parturient accumsan elementum.</p>
 
 	</section>
+	
+	<section class="portfolio">
+	
+		<h1>Portfolio</h1>
+		<h2>Ad</h2>
+
+		<p>Et proin netus sit senectus primis <strong>taciti</strong> dis. Varius est, pede morbi sagittis consectetuer rutrum rutrum proin semper taciti aliquet. Tempor consectetuer vivamus aliquam, id hendrerit lacinia ullamcorper libero porta. Fusce viverra cras cubilia.</p>
+		<h2>Ligula Parturient Mi Amet Enim Dictumst</h2>
+
+		<p>Ut senectus nascetur gravida platea eget rutrum curabitur. Hendrerit habitasse. Aenean volutpat orci litora cras ullamcorper varius iaculis viverra ornare donec montes blandit duis. Hendrerit at est <em>ultrices</em> aliquam ad netus.</p>
+
+		<p>Leo fermentum habitant, egestas dui iaculis nisi tristique tincidunt. Feugiat fusce leo hymenaeos nam venenatis <strong>magna</strong> mus phasellus aenean egestas bibendum magnis convallis consectetuer. Montes. Sit pretium phasellus tincidunt donec est quam parturient accumsan elementum.</p>
+
+	</section>
+	
 	
 	</div>
 
@@ -91,7 +110,7 @@
 	
 	
 	//load script
-		var scripts = ["js/jq/scrolling.js"];
+		var scripts = ["js/jq/init.js", "js/jq/scrolling.js", "js/jq/greetingAnimation.js"];
 		var done = false;
 		var checkDone = function(){
 		if(!done && (!this.readyS || this.readystate == "loaded" || this.readystate == "complete")){
