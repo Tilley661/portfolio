@@ -11,9 +11,11 @@ margin-top: 0px;
 p{
 	font-family:'Amatic SC';
 }
+
 h1{
 	font-family:'Amatic SC';
 }
+
 h2{
 	font-family:'Amatic SC';
 }
@@ -29,23 +31,20 @@ h2{
 	background:RGBA(20,2,30,1);
 }
 
-
 #content{
 	position:fixed;
 	width:100%;
 	top:0px;
 	color:white;
 }
+
 section{
   margin:0 auto;
 }
 
-
 #title_text{
 	margin:0 auto;
 }
-
-
 
 #title_text h1{
 	margin:0 auto;
@@ -55,4 +54,12 @@ section{
 #title_text canvas{
 	display:inline;
 	margin:0 auto;
+}
+
+.bg_canvas{
+	position:fixed;
+	top:0px;
+	left:0px;
+	height:100vh;
+	width:100vw;
 }

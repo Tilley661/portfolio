@@ -29,6 +29,8 @@
   
   <div id="bg"></div>
   
+  <div id="canvas_holder"></div>
+  
   <div id="content">
   
   	<section class="greeting">
@@ -110,7 +112,7 @@
 	
 	
 	//load script
-		var scripts = ["js/jq/init.js", "js/jq/scrolling.js", "js/jq/greetingAnimation.js"];
+		var scripts = ["js/jq/init.js", "js/jq/scrolling.js", "js/jq/greetingAnimation.js", "js/jq/canvasDraw.js"];
 		var done = false;
 		var checkDone = function(){
 		if(!done && (!this.readyS || this.readystate == "loaded" || this.readystate == "complete")){
