@@ -1,0 +1,22 @@
+<NotepadPlus>
+    <Project name="Portfolio">
+        <Folder name="Root">
+            <Folder name="cad">
+                <File name="cad\bRIDGE.bak" />
+                <File name="cad\bRIDGE.dwg" />
+            </Folder>
+            <Folder name="css">
+                <File name="css\main.css" />
+            </Folder>
+            <Folder name="js">
+                <Folder name="jq">
+                    <File name="js\jq\canvasDraw.js" />
+                    <File name="js\jq\greetingAnimation.js" />
+                    <File name="js\jq\init.js" />
+                    <File name="js\jq\scrolling.js" />
+                </Folder>
+            </Folder>
+            <File name="index.html" />
+        </Folder>
+    </Project>
+</NotepadPlus>
