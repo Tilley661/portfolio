@@ -23,6 +23,14 @@ function getCookie(cname) {
     return "";
 }
 
+function checkViewport(){
+		if ($( window ).width() < 720){
+			$("#sizeWarning").fadeIn();
+		}else{
+			$("#sizeWarning").fadeOut();
+	}
+}
+	
 
 //GLOBAL COOKIE MONSTER
 
@@ -32,24 +40,28 @@ var cInOffset = $("#content").offset().left;
 var currentOffset = cInOffset;
 var wInWidth = $("#content").width();
 var cInWidth = $("#content").width();
+var numSectionItems = $('#content section').length;
 
+
+setCookie("TotalPages", numSectionItems , 1);
 
 
 function setVars(){ //set all global vars
 	a = getCookie("page");
-	if (a != ""){
+	if (a != "" && a < (numSectionItems + 1) && a > 0){
 		currentPage = a;
 	}
+	console.log("landing page = " + currentPage);
 	return false;
 }
 //init vars
-setVars();
+//setVars();
+checkViewport();
 //---------
 
 
 
 
-var numSectionItems = $('#content section').length;
-setCookie("TotalPages", numSectionItems , 1);
+
 
 setCookie("Hello World" , "test" , 1);

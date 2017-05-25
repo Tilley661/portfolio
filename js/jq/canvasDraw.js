@@ -3,21 +3,21 @@
 //-------------------------------------- VARS AND FUNCS ----------------
 
 var defineCanvas = {
-  canvass: 	['A', 'B', 'C'],
+	canvass: ['A', 'B', 'C'],
 
 	appendCanvass: function(){
 		for ( i = 0 ; i < this.canvass.length ; i++){
 		$('<canvas id="canvas_' + this.canvass[i] + '" class="bg_canvas"></canvas>').appendTo($('#canvas_holder'));
 		}
+	return false;
 	},
-	
+
 	bgColor: function(){
-		var color = $('#bg').css('backgroundColor');
-		return color;
+		var c = $('#bg').css('backgroundColor');
+		return c;
 	}
-	
-	
 };
+
 
 
 function drawLineB(){
@@ -36,7 +36,7 @@ var vertex = calcPoints(pointScale(lineB));
 
 //get canvas
 
-var canvas = document.getElementById('canvas_B')
+var canvas = document.getElementById('canvas_B');
 var ctx = canvas.getContext('2d');
 
 canvas.width = $( window ).width();
@@ -48,6 +48,7 @@ var speed = 10;
 //draw line
 draw(vertex,ctx,t, speed);
 }
+
 
 
 
@@ -66,7 +67,7 @@ var vertex = calcPoints(pointScale(lineA));
 
 //get canvas
 
-var canvas = document.getElementById('canvas_A')
+var canvas = document.getElementById('canvas_A');
 var ctx = canvas.getContext('2d');
 
 canvas.width = $( window ).width();
@@ -112,8 +113,8 @@ function pointScale(vertices){
     col:colour
     }); 
 	}
-	console.log(scalePoints);
-  return (scalePoints)
+	//console.log(scalePoints);
+  return (scalePoints);
 }
 
 
@@ -138,11 +139,11 @@ function calcPoints(vertices){
       wX = vertices[i-1].x + ((dx/iter)*j);
       wY = vertices[i-1].y + ((dy/iter)*j);
       
-      waypoints.push({ x:wX , y:wY, col:vertices[i].col }) 
+      waypoints.push({ x:wX , y:wY, col:vertices[i].col }); 
       }
     }
   }
-  console.log(waypoints)
+  //console.log(waypoints)
   return (waypoints);
 }
 
@@ -171,7 +172,7 @@ function draw(points,ctx,t,speed){
    	ctx.beginPath();
     ctx.strokeStyle = points[t].col;
     ctx.moveTo(points[t - (speed  + 1)].x , points[t - (speed  + 1)].y);
-    ctx.lineTo(points[t].x , points[t].y)
+    ctx.lineTo(points[t].x , points[t].y);
     ctx.stroke();
 }
 
@@ -180,12 +181,18 @@ function draw(points,ctx,t,speed){
 
 //----------------------------------------------------run time -----------------------------------------------
 
-//creat canvases
-defineCanvas.appendCanvass();
+//create canvases
+if ($("#canvas_holder canvas").length < 1){
+	console.log("canvas holder count = " + $('#canvas_holder').length);
+	defineCanvas.appendCanvass();
+}
 
 //draw lines
-drawLineA();
-drawLineB();
+	drawLineA();
+	drawLineB();
+
+	//not drawing on a third canvas seems to bug out script
+	
 console.log(defineCanvas.bgColor());
 
 

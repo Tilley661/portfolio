@@ -21,11 +21,10 @@ h2{
 }
 
 #bg{
-	postition:fixed;
 	top:0px;
 	left:0px;
 	overflow:hidden;
-	width:100%;
+	width:100vw;
 	height:85vh;
 	z-index:1;
 	background:RGBA(20,2,30,1);
@@ -40,7 +39,26 @@ h2{
 
 section{
   margin:0 auto;
+  min-width:720px; 
+  max-width:2400px;
 }
+
+.section-holder{
+	margin: 10%;
+}
+
+#sizeWarning {
+    display: none;
+    position: fixed;
+    top: 0px;
+    margin: 5%;
+    color: white;
+    background: RGBA(0,0,0,0.85);
+    height: auto;
+    width: 90%;
+	text-align: center;
+}
+
 
 #title_text{
 	margin:0 auto;

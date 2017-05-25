@@ -37,11 +37,11 @@ var context = canvas.getContext('2d');
 var prog = 0;
 var fps = 60;
 var tO = $('#title_text h1');
-console.log(tO.width());
+//console.log(tO.width());
 var titleWidth = tO.width();
 
 
-console.log(titleWidth);
+//console.log(titleWidth);
 
 function drawUnderline(reAni) {
 	
@@ -51,7 +51,7 @@ function drawUnderline(reAni) {
 		//cant animate if pog is = 100;
 	}
 	
-	console.log('prog = ' + prog);
+	//console.log('prog = ' + prog);
 	if (prog < 100){
 		setTimeout(function() {
 
@@ -63,7 +63,7 @@ function drawUnderline(reAni) {
 			canvas.height = 50;
 			canvas.width = tO.width();
 			
-			console.log('tO left = ' + tO.position().left);
+			//console.log('tO left = ' + tO.position().left);
 			
 			context.clearRect(0, 0, canvas.width, canvas.height);
 			//begin path to left
